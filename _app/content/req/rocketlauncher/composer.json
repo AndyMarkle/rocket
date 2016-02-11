@@ -1,0 +1,50 @@
+{
+  "name"        : "willow/rocketlauncher",
+  "description" : "Launch Rocket.",
+  "keywords"    : [ "wordpress", "plugin", "cms", "bare" ],
+  "type"        : "wordpress-plugin",
+  "homepage"    : "http://rocket.wyfndr.co/",
+  "license"     : "MIT",
+  "authors"     : [
+    {
+      "name"     : "Andy Markle",
+      "email"    : "andym@willowmarketing.com",
+      "homepage" : "http://willowmarketing.com",
+      "role"     : "Developer"
+    }
+  ],
+  "support" : {
+    "issues" : "http://rocket.wyfndr.co/",
+    "source" : "http://rocket.wyfndr.co/"
+  },
+  "require" : {
+    "php"                       : ">=5.4",
+    "composer/installers"       : "^1",
+    "wcm/git-php-hooks"         : "^1",
+    "wcm/git-php-hooks-library" : "^1"
+  },
+  "require-dev" : {
+    "phpunit/phpunit" : "3.7.*",
+    "mockery/mockery" : "dev-master",
+    "10up/wp_mock"    : "dev-master",
+    "brain/monkey"    : "dev-master"
+  },
+  "minimum-stability" : "dev",
+  "prefer-stable"     : true,
+  "autoload" : {
+    "files" : [ "Bootstrap.php" ],
+    "psr-4" : {
+      "WCM\\StripNaked\\"        : "src/",
+      "WCM\\StripNaked\\Tests\\" : "tests/src/"
+    }
+  },
+  "config" : {
+    "bin-dir"             : "bin",
+    "optimize-autoloader" : true
+  },
+  "extra" : {
+    "branch-alias" : {
+      "dev-master" : "1.0.x-dev"
+    }
+  }
+}
